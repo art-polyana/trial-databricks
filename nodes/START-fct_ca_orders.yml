@@ -1,0 +1,233 @@
+fileVersion: 1
+id: 5837105d-eca5-4e54-8366-0c973cf3762c
+name: fct_ca_orders
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: START
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad5781aa-f5d0-44be-b49f-452413694ddf
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: LONG
+        description: ""
+        isBusinessKey: true
+        name: order_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b74a7b01-7ba9-401c-b510-4fe76f65d419
+                stepCounter: d28db9c7-da1c-43c1-8007-348d695d78de
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8be328d-56e5-4181-83c2-e12cbecc93ad
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: BIGINT
+        description: ""
+        name: dim_ca_customers_key
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8d8afada-71dc-4647-8234-60ad9f5c810e
+                stepCounter: 5d6d577b-f12e-4206-beda-9c868df04152
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b54e326-d128-4ec1-91ff-157791bb5d5a
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: LONG
+        description: ""
+        name: customer_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2fd56328-624c-439a-8f2b-f968b6225d53
+                stepCounter: d28db9c7-da1c-43c1-8007-348d695d78de
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b88dc6e-9110-440a-9feb-9b2fd871992c
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: BIGINT
+        description: ""
+        name: dim_ca_products_key
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 36e9fbfe-e1c3-402d-b071-c6db9d231014
+                stepCounter: 0bde05cd-ef5f-4938-9332-9e7c2e12cda0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: df3c49dd-feb3-40ab-bf26-1116acc09a37
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: LONG
+        description: ""
+        name: product_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6299107f-260b-4ce7-9d79-15f3e9c59d61
+                stepCounter: d28db9c7-da1c-43c1-8007-348d695d78de
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10ec2173-6dbc-4ae1-bcd7-e53b2bd4ef7f
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: DATE
+        description: ""
+        name: order_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8dbdb50e-968b-4ace-a495-ec3a7209f033
+                stepCounter: d28db9c7-da1c-43c1-8007-348d695d78de
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 36e0569d-ebce-462e-8e46-ceb938a240b2
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: STRING
+        description: ""
+        name: sales_rep
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8fb5b6ec-d9db-4eaa-b855-7f6be50b9a93
+                stepCounter: d28db9c7-da1c-43c1-8007-348d695d78de
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 36fa28b7-c08d-49cf-b230-dfe6edbd97a4
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: INT
+        description: ""
+        name: quantity
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7218ccf2-38f8-47af-b90c-123d72320b47
+                stepCounter: d28db9c7-da1c-43c1-8007-348d695d78de
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ec2253cf-2d73-4705-9e3a-0608bc5cd866
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: DECIMAL
+        description: ""
+        name: total_amount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 75167177-59f5-4383-be7c-20e4973942d8
+                stepCounter: d28db9c7-da1c-43c1-8007-348d695d78de
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 98fb8732-1b9d-4fc8-af66-ea3f01317f1c
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: STRING
+        description: ""
+        name: order_status
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4a9f5028-a845-4015-b639-78a6b955ce89
+                stepCounter: d28db9c7-da1c-43c1-8007-348d695d78de
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 416ac437-ed20-4b8c-851d-9699279a3c75
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: system_create_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b3d84200-a9c2-47d4-a18b-075a79290ff8
+          stepCounter: 5837105d-eca5-4e54-8366-0c973cf3762c
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: system_update_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          dim_ca_customers: 5d6d577b-f12e-4206-beda-9c868df04152
+          dim_ca_products: 0bde05cd-ef5f-4938-9332-9e7c2e12cda0
+          stg_ca_orders: d28db9c7-da1c-43c1-8007-348d695d78de
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: START
+            nodeName: dim_ca_customers
+          - locationName: START
+            nodeName: dim_ca_products
+          - locationName: START
+            nodeName: stg_ca_orders
+        join:
+          joinCondition: |-
+            FROM {{ ref('START', 'stg_ca_orders') }} `stg_ca_orders`
+            LEFT JOIN {{ ref('START', 'dim_ca_customers') }} `dim_ca_customers`
+                ON `stg_ca_orders`.customer_id = `dim_ca_customers`.customer_id
+                AND dim_ca_customers.system_current_flag = 'Y'
+            LEFT JOIN {{ ref('START', 'dim_ca_products') }} `dim_ca_products`
+                ON `stg_ca_orders`.product_id = `dim_ca_products`.product_id
+        name: fct_ca_orders
+        noLinkRefs: []
+  name: fct_ca_orders
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

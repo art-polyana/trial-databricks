@@ -1,0 +1,152 @@
+fileVersion: 1
+id: cd9dab6f-a3c4-4c67-8418-1720d83a4c4c
+name: ca_opportunities
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: START
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7e6f2cd-a5cb-4655-84f0-ebee7ab74edb
+          stepCounter: cd9dab6f-a3c4-4c67-8418-1720d83a4c4c
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: opportunity_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0fba0505-0730-47aa-ac8e-db2815ff053c
+          stepCounter: cd9dab6f-a3c4-4c67-8418-1720d83a4c4c
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: customer_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2fb5fd6d-e596-472a-8a43-b58e8a8f3e91
+          stepCounter: cd9dab6f-a3c4-4c67-8418-1720d83a4c4c
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: sales_rep
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b1d3a9c-3dad-409a-b9ce-eb1ebb9f9b4c
+          stepCounter: cd9dab6f-a3c4-4c67-8418-1720d83a4c4c
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: province
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3274b836-7646-4b1b-a2d6-a757deafa125
+          stepCounter: cd9dab6f-a3c4-4c67-8418-1720d83a4c4c
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: sales_stage
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f9acf202-2033-411a-bc4c-df937a0405c7
+          stepCounter: cd9dab6f-a3c4-4c67-8418-1720d83a4c4c
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: ""
+        name: expected_revenue
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: db0e7d37-8ccc-429c-acca-164d5c6d33b6
+          stepCounter: cd9dab6f-a3c4-4c67-8418-1720d83a4c4c
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        name: probability_pct
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 06e5cfb7-ab6c-4464-b91d-dd7026deb82d
+          stepCounter: cd9dab6f-a3c4-4c67-8418-1720d83a4c4c
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: close_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: ca_opportunities
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

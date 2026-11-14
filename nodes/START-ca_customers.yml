@@ -1,0 +1,101 @@
+fileVersion: 1
+id: 6d72f35e-c8be-450b-aa68-03da5731fb32
+name: ca_customers
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: START
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f9972b5-cf43-4c89-b6ac-bb302e7f7617
+          stepCounter: 6d72f35e-c8be-450b-aa68-03da5731fb32
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: customer_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa41250b-29d0-41e6-8cd3-a1b88ea2067e
+          stepCounter: 6d72f35e-c8be-450b-aa68-03da5731fb32
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: customer_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ab9304eb-dc1d-4c08-bcc2-93111f09ad9e
+          stepCounter: 6d72f35e-c8be-450b-aa68-03da5731fb32
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: province
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 68c8e1e6-5403-4eac-96ad-d2cd6cfa458e
+          stepCounter: 6d72f35e-c8be-450b-aa68-03da5731fb32
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: city
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a8961fb-ec78-43c7-a1a1-cfe33fd87dd6
+          stepCounter: 6d72f35e-c8be-450b-aa68-03da5731fb32
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: segment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: ca_customers
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

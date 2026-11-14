@@ -1,0 +1,186 @@
+fileVersion: 1
+id: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+name: suppliers
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: START
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ceda04f3-001c-4ea9-b939-b10f2cd00d98
+          stepCounter: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: supplierID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e844d1b-434d-48ae-b429-533c3a09f154
+          stepCounter: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c413ab4b-044c-4ee1-b595-4adc7b646e61
+          stepCounter: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: ingredient
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 54db034f-4570-4c13-83b5-3715a48d11a1
+          stepCounter: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: continent
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 690b176f-9dd4-4b03-b723-18276c2f6062
+          stepCounter: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: city
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a95c23a-6253-40e7-a7f3-0b4526b0bccf
+          stepCounter: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: district
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ffc0528-429f-4bba-8f77-31664b5e895c
+          stepCounter: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: size
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: db7f0ccc-24c1-4a08-b21b-7eb7d6320eee
+          stepCounter: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        name: longitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a290918f-9d0c-4b9f-83a0-3d5b971cf63a
+          stepCounter: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        name: latitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a474e1a-a508-4cd9-baea-04a00a94197a
+          stepCounter: 7af35b11-20a8-4fa3-9b62-b98bf46f7ec2
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: approved
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: suppliers
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

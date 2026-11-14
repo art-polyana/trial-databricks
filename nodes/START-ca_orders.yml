@@ -1,0 +1,152 @@
+fileVersion: 1
+id: 5c82bd8d-d861-484c-beb7-3d2b52f733eb
+name: ca_orders
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: START
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63c5b70a-7f97-49df-b3c9-203e08e11abe
+          stepCounter: 5c82bd8d-d861-484c-beb7-3d2b52f733eb
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: order_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9618c8fa-8644-4f02-938c-9b46c3060849
+          stepCounter: 5c82bd8d-d861-484c-beb7-3d2b52f733eb
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: customer_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e1f3cd9-321e-4849-a999-59223751d3a6
+          stepCounter: 5c82bd8d-d861-484c-beb7-3d2b52f733eb
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: product_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73afd767-825e-4aeb-9227-ac5990729cf6
+          stepCounter: 5c82bd8d-d861-484c-beb7-3d2b52f733eb
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: order_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 24017777-eac1-4dc4-bfdc-592e67d99072
+          stepCounter: 5c82bd8d-d861-484c-beb7-3d2b52f733eb
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: sales_rep
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da7e4add-bf53-45b9-b48e-171bb385ed32
+          stepCounter: 5c82bd8d-d861-484c-beb7-3d2b52f733eb
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        name: quantity
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 508342c6-23d3-47d8-b550-59b207a5f795
+          stepCounter: 5c82bd8d-d861-484c-beb7-3d2b52f733eb
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: ""
+        name: total_amount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5100bba9-0b71-4bed-8f35-b70eed18679a
+          stepCounter: 5c82bd8d-d861-484c-beb7-3d2b52f733eb
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: order_status
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: ca_orders
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

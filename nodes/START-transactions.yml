@@ -1,0 +1,186 @@
+fileVersion: 1
+id: bad72e16-0a4e-41eb-abb6-a8599903f006
+name: transactions
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: START
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 187c7a04-d1d1-471d-b613-8183578a67b2
+          stepCounter: bad72e16-0a4e-41eb-abb6-a8599903f006
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: transactionID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4f600a2-5086-4ba2-b449-58113223414a
+          stepCounter: bad72e16-0a4e-41eb-abb6-a8599903f006
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: customerID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7413a7c2-f10a-4f29-9f04-1c4c88df6f9d
+          stepCounter: bad72e16-0a4e-41eb-abb6-a8599903f006
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: franchiseID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad936532-bab8-4478-a3e2-061778440c8f
+          stepCounter: bad72e16-0a4e-41eb-abb6-a8599903f006
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: dateTime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8aeb9159-ccf4-4177-a227-58df0448b449
+          stepCounter: bad72e16-0a4e-41eb-abb6-a8599903f006
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: product
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fb3011bd-ae28-4905-a610-657689584cb3
+          stepCounter: bad72e16-0a4e-41eb-abb6-a8599903f006
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: quantity
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71c89154-7fef-4b35-aa63-e5581a522605
+          stepCounter: bad72e16-0a4e-41eb-abb6-a8599903f006
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: unitPrice
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0a1b06e-ec26-4c3f-aea4-27ce8b4bbc0b
+          stepCounter: bad72e16-0a4e-41eb-abb6-a8599903f006
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: totalPrice
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 22e576ed-6670-4115-936b-ba153d6b8ecc
+          stepCounter: bad72e16-0a4e-41eb-abb6-a8599903f006
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: paymentMethod
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2f94bb8-4cb4-4939-8cc5-a268706afdaa
+          stepCounter: bad72e16-0a4e-41eb-abb6-a8599903f006
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: cardNumber
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: transactions
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

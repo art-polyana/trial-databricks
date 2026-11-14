@@ -1,0 +1,84 @@
+fileVersion: 1
+id: 96ef7394-16e8-4ac0-8244-2d3fe18ee619
+name: ca_sales_targets
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: START
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f13e222f-88cc-4d7f-b345-4db0c7c0abb7
+          stepCounter: 96ef7394-16e8-4ac0-8244-2d3fe18ee619
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: sales_rep
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9b39d6ac-ad93-420d-bcda-39ce8c0b3313
+          stepCounter: 96ef7394-16e8-4ac0-8244-2d3fe18ee619
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: province
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55e678fd-c86b-4a41-8240-ec7ba3d6a92c
+          stepCounter: 96ef7394-16e8-4ac0-8244-2d3fe18ee619
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: target_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5fe47d65-48e2-489e-963a-06dabc910a5e
+          stepCounter: 96ef7394-16e8-4ac0-8244-2d3fe18ee619
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: target_amount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: ca_sales_targets
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

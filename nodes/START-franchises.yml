@@ -1,0 +1,186 @@
+fileVersion: 1
+id: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+name: franchises
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: START
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2269dfbc-0d0a-4dc6-9180-06906831be87
+          stepCounter: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: franchiseID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01f07e48-5ef2-477b-90eb-52f081d7097f
+          stepCounter: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: baa04457-f094-41fe-9bee-778d1215fd29
+          stepCounter: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: city
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c37fe4f4-246b-4cec-8bc3-84e38bd4b510
+          stepCounter: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: district
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 12fd7c76-08c1-49e9-be83-61e152235b31
+          stepCounter: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: zipcode
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f699f4ed-6211-4806-ba2b-ae9c7c07710e
+          stepCounter: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: country
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ab62c030-1a17-4612-b6e4-a379b95d4b2d
+          stepCounter: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: size
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18718b40-1683-4239-9b26-27a34e62656f
+          stepCounter: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        name: longitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f29f9079-b8b4-45b4-a7c0-bbd90d435ecf
+          stepCounter: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        name: latitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 31c92b08-92c1-423d-a7fe-c48d04227e16
+          stepCounter: 77579acc-6541-4f9a-b81b-9ad62c4c9736
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: supplierID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: franchises
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,84 @@
+fileVersion: 1
+id: 5cfe2b38-9ba9-433c-bf8e-829c16abd478
+name: customer_reviews
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: START
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d620d93-8944-41c9-b2d1-2e0d1da7b6f5
+          stepCounter: 5cfe2b38-9ba9-433c-bf8e-829c16abd478
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: review
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 275393a3-0f82-4d9b-ab13-114a35847fbb
+          stepCounter: 5cfe2b38-9ba9-433c-bf8e-829c16abd478
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: franchiseID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83027ef5-0abb-4e1d-8982-72e3d7e40ccb
+          stepCounter: 5cfe2b38-9ba9-433c-bf8e-829c16abd478
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: review_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa7267bd-fced-496d-ae43-2ebe55e13c4c
+          stepCounter: 5cfe2b38-9ba9-433c-bf8e-829c16abd478
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        name: new_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: customer_reviews
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
