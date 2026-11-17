@@ -1,0 +1,42 @@
+name: fin_controlling
+version: "1.0.0"
+config-version: 2
+
+# В dbt Cloud профиль подставляется из окружения; имя нужно только для локального dbt Core.
+profile: fin_controlling
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets: ["target", "dbt_packages"]
+
+# Каталог Unity Catalog задаётся переменной окружения dbt Cloud:
+#   Project default -> fin_dev, окружение Deployment -> fin_prod (при желании Staging -> fin_test).
+# Схемы фиксированы (см. macros/generate_schema_name.sql) и одинаковы во всех каталогах.
+models:
+  fin_controlling:
+    +database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
+    staging:
+      +schema: dbt_staging
+      +materialized: view
+    marts:
+      +schema: dbt_marts
+      +materialized: table
+
+seeds:
+  fin_controlling:
+    +database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
+    +schema: dbt_seeds
+
+snapshots:
+  fin_controlling:
+    +database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
+    +schema: dbt_snapshots
+
+data_tests:
+  fin_controlling:
+    +severity: error

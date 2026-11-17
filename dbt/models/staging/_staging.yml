@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: stg_billing__transactions
+    description: "Транзакции биллинга из silver; деньги в DECIMAL(18,2)."
+    columns:
+      - name: transaction_hk
+        data_tests: [not_null, unique]
+      - name: transaction_date
+        data_tests: [not_null]
+      - name: cost_center_sk
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_billing__cost_centers')
+                field: cost_center_sk
+      - name: tariff_tier
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Tier-1 (High Margin)', 'Tier-2 (Standard)']
+      - name: gross_amount
+        data_tests: [not_null]
+
+  - name: stg_billing__cost_centers
+    description: "Текущие версии центров затрат (одна строка на ZIP)."
+    columns:
+      - name: cost_center_sk
+        data_tests: [not_null, unique]
+      - name: zip_code
+        data_tests: [not_null, unique]
+
+  - name: stg_billing__rejected_trips
+    description: "Поездки из карантина пайплайна."
+    columns:
+      - name: dq_failure_reason
+        data_tests: [not_null]
+
+  - name: stg_erp__orders
+    description: "B2B-заказы ERP (TPC-H)."
+    columns:
+      - name: order_hk
+        data_tests: [not_null, unique]
+      - name: order_status_code
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['F', 'O', 'P']
+      - name: customer_hk
+        data_tests:
+          - not_null
+          # В v1 пайплайна клиенты и заказы обрезались независимо (limit 200000) -> до 73% «висячих» заказов.
+          # После перехода на tpch_sf1 (пакет fin_controlling v2) должно стать 0, тогда severity можно поднять до error.
+          - relationships:
+              arguments:
+                to: ref('stg_erp__customers')
+                field: customer_hk
+              config:
+                severity: warn
+
+  - name: stg_erp__customers
+    description: "B2B-клиенты ERP (TPC-H)."
+    columns:
+      - name: customer_hk
+        data_tests: [not_null, unique]
+      - name: credit_risk_tier
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['High Credit Risk (Overdue)', 'Standard Risk', 'Prime / VIP Client']

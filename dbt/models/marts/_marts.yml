@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  # --- Finance (биллинг) -------------------------------------------------------------------
+  - name: fct_daily_revenue
+    description: "Выручка по дням: день × центр затрат × тарифный уровень. Деньги в USD, DECIMAL(18,2)."
+    columns:
+      - name: transaction_date
+        data_tests: [not_null]
+      - name: cost_center_name
+        data_tests: [not_null]
+      - name: transactions
+        data_tests: [not_null]
+
+  - name: mart_cost_center_monthly
+    description: "Месячный P&L по центрам затрат: динамика месяц к месяцу (net_mom_growth_pct) и доля в общей выручке (net_share_pct)."
+    columns:
+      - name: report_month
+        data_tests: [not_null]
+      - name: cost_center_name
+        data_tests: [not_null]
+
+  - name: dim_cost_centers
+    description: "Центры затрат (ZIP) с накопленной статистикой транзакций."
+    columns:
+      - name: cost_center_sk
+        data_tests: [not_null, unique]
+
+  - name: mart_dq_rejections_daily
+    description: "Брак пайплайна по дням и причинам: сколько поездок и какая сумма не попала в выручку."
+    columns:
+      - name: dq_failure_reason
+        data_tests: [not_null]
+
+  # --- B2B ----------------------------------------------------------------------------------
+  - name: fct_orders
+    description: "Заказы с атрибутами клиента; заказы без клиента попадают в 'Unknown', а не теряются."
+    columns:
+      - name: order_hk
+        data_tests: [not_null, unique]
+      - name: has_customer
+        description: "FALSE — клиент заказа не найден в справочнике (см. warn-тест relationships в staging)."
+
+  - name: dim_customers
+    description: "Клиенты с объёмом заказов, открытой экспозицией и флагом is_risk_watchlist (долг по счёту + открытые заказы)."
+    columns:
+      - name: customer_hk
+        data_tests: [not_null, unique]
+
+  - name: mart_open_exposure_by_region
+    description: "Открытая кредитная экспозиция (заказы Open) по регионам, странам и уровню риска, с долей от общей."
+    columns:
+      - name: macro_region
+        data_tests: [not_null]

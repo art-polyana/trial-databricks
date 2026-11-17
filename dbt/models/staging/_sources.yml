@@ -1,0 +1,43 @@
+version: 2
+
+# Источники — таблицы пайплайна fin_controlling (Databricks Jobs) в каталоге текущего окружения.
+# dbt их только читает: прав MODIFY на эти схемы у service principal dbt нет.
+sources:
+  - name: fin_silver
+    description: "Silver-слой пайплайна fin_controlling: очищенные факты и измерения."
+    database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
+    schema: silver
+    tables:
+      - name: fact_financial_transactions
+        description: "Транзакции биллинга (поездки) с НДС и центром затрат."
+        loaded_at_field: updated_at
+        config:
+          freshness:
+            warn_after: {count: 48, period: hour}
+        columns:
+          - name: transaction_hk
+            data_tests: [not_null, unique]
+      - name: dim_cost_centers
+        description: "Справочник центров затрат по ZIP (структура SCD2)."
+      - name: fact_b2b_orders
+        description: "B2B-заказы (TPC-H)."
+        loaded_at_field: updated_at
+        config:
+          freshness:
+            warn_after: {count: 48, period: hour}
+        columns:
+          - name: order_hk
+            data_tests: [not_null, unique]
+      - name: dim_b2b_customers
+        description: "B2B-клиенты с регионом и уровнем кредитного риска."
+        columns:
+          - name: customer_hk
+            data_tests: [not_null, unique]
+
+  - name: fin_quarantine
+    description: "Записи, отбракованные DQ-правилами пайплайна."
+    database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
+    schema: quarantine
+    tables:
+      - name: erp_trips_rejected
+        description: "Поездки, не прошедшие DQ (причина в dq_failure_reason)."
