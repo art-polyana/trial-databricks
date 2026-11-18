@@ -10,8 +10,8 @@ sources:
     tables:
       - name: fact_financial_transactions
         description: "Транзакции биллинга (поездки) с НДС и центром затрат."
-        loaded_at_field: updated_at
         config:
+          loaded_at_field: updated_at
           freshness:
             warn_after: {count: 48, period: hour}
         columns:
@@ -21,8 +21,8 @@ sources:
         description: "Справочник центров затрат по ZIP (структура SCD2)."
       - name: fact_b2b_orders
         description: "B2B-заказы (TPC-H)."
-        loaded_at_field: updated_at
         config:
+          loaded_at_field: updated_at
           freshness:
             warn_after: {count: 48, period: hour}
         columns:

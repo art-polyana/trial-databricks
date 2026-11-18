@@ -14,6 +14,14 @@ snapshot-paths: ["snapshots"]
 
 clean-targets: ["target", "dbt_packages"]
 
+vars:
+  # Кто может читать схемы dbt_* (USE SCHEMA + SELECT). Пользователи, группы или service principals
+  # Unity Catalog. 'account users' — все пользователи аккаунта; для prod лучше отдельная группа.
+  reader_principals: ["account users"]
+
+on-run-end:
+  - "{{ grant_read_access(results) }}"
+
 # Каталог Unity Catalog задаётся переменной окружения dbt Cloud:
 #   Project default -> fin_dev, окружение Deployment -> fin_prod (при желании Staging -> fin_test).
 # Схемы фиксированы (см. macros/generate_schema_name.sql) и одинаковы во всех каталогах.
@@ -27,15 +35,12 @@ models:
       +schema: dbt_marts
       +materialized: table
 
-seeds:
-  fin_controlling:
-    +database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
-    +schema: dbt_seeds
-
-snapshots:
-  fin_controlling:
-    +database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
-    +schema: dbt_snapshots
+# Когда появятся seeds / snapshots, добавьте для них тот же каталог и свою схему, например:
+# seeds:
+#   fin_controlling:
+#     +database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
+#     +schema: dbt_seeds
+# (Fusion предупреждает о блоках конфигурации, которые ни к чему не применяются.)
 
 data_tests:
   fin_controlling:
