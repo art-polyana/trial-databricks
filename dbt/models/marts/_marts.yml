@@ -6,11 +6,28 @@ models:
     description: "Выручка по дням: день × центр затрат × тарифный уровень. Деньги в USD, DECIMAL(18,2)."
     columns:
       - name: transaction_date
+        description: "Дата транзакции (день начала поездки)."
         data_tests: [not_null]
       - name: cost_center_name
+        description: "Центр затрат по ZIP посадки."
         data_tests: [not_null]
+      - name: tariff_tier
+        description: "Тарифный уровень центра затрат."
       - name: transactions
+        description: "Количество транзакций за день."
         data_tests: [not_null]
+      - name: manual_entries
+        description: "Сколько из них внесено вручную (не из системы биллинга)."
+      - name: gross_amount
+        description: "Выручка брутто, USD."
+      - name: vat_amount
+        description: "НДС, USD."
+      - name: net_amount
+        description: "Выручка нетто (брутто − НДС), USD."
+      - name: manual_gross_amount
+        description: "Брутто ручных проводок, USD."
+      - name: avg_net_ticket
+        description: "Средний чек нетто, USD."
 
   - name: mart_cost_center_monthly
     description: "Месячный P&L по центрам затрат: динамика месяц к месяцу (net_mom_growth_pct) и доля в общей выручке (net_share_pct)."
