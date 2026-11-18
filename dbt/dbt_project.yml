@@ -27,15 +27,12 @@ models:
       +schema: dbt_marts
       +materialized: table
 
-seeds:
-  fin_controlling:
-    +database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
-    +schema: dbt_seeds
-
-snapshots:
-  fin_controlling:
-    +database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
-    +schema: dbt_snapshots
+# Когда появятся seeds / snapshots, добавьте для них тот же каталог и свою схему, например:
+# seeds:
+#   fin_controlling:
+#     +database: "{{ env_var('DBT_FIN_CATALOG', 'fin_dev') }}"
+#     +schema: dbt_seeds
+# (Fusion предупреждает о блоках конфигурации, которые ни к чему не применяются.)
 
 data_tests:
   fin_controlling:
